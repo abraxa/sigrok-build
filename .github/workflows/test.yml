@@ -1,0 +1,21 @@
+name: node20 test
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  node20_test:
+    name: node20 test
+
+    runs-on: ubuntu-latest
+
+#    container:
+#      image: ghcr.io/sigrokproject/sigrok-appimage-${{ matrix.target.container }}:latest
+
+    steps:
+      - name: Checkout sigrok-cli
+        uses: actions/checkout@v4
+        with:
+          repository: sigrokproject/sigrok-cli
+          path: sigrok-cli
